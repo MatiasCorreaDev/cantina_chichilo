@@ -11,7 +11,7 @@
     width: 250px;
 }
 
-.bi-zoom-in .bi-fork-knife .bi-journal-check .bi-geo-alt .bi-caret-right .bi-telephone-outbound .bi-calendar-week .bi-instagram{
+.bi-zoom-in .bi-fork-knife .bi-journal-check .bi-geo-alt .bi-caret-right .bi-telephone-outbound .bi-calendar-week .bi-instagram {
     font-size: 24px;
 }
 
@@ -41,7 +41,7 @@ body {
 nav {
     display: flex;
     width: 100%;
-    height: 65px;
+
     flex-direction: row;
     background-color: rgba(0, 135, 141);
     justify-content: space-evenly;
@@ -51,12 +51,13 @@ nav {
     margin-top: -5px;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 nav>a {
     text-decoration: none;
     color: beige;
-    font-size: 38px;
+    font-size: 30px;
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -68,15 +69,10 @@ nav>a:hover {
     scale: 110%;
 }
 
-/* #reserva {
-    margin-left: auto;
-    
-} */
 
 header {
     background-color: rgba(245, 245, 220, 0.712);
     width: 70%;
-    height: 250px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -85,32 +81,28 @@ header {
 
 }
 
-header>nav {
-    width: 33%;
-}
-
-figcaption {
-    font-size: large;
-    padding: 10px;
-    color: beige;
-    font-family: "Dancing Script", cursive;
+.fotoheader {
+    width: 15%;
 }
 
 .contenedorfotos {
     width: 80%;
     display: flex;
+    justify-content: center;
     margin: auto;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 .fotos {
-    width: 320px;
-    height: 410px;
+    width: 290px;
+    height: 380px;
     border-radius: 15px;
 }
 
 .fotos:hover {
     scale: 110%;
+    transition: 1s;
 }
 
 h1 {
@@ -132,7 +124,7 @@ h2 {
     font-weight: 800;
     font-style: normal;
     color: rgba(0, 135, 141);
-    font-size: 48px;
+    font-size: 36px;
 
 }
 
@@ -140,8 +132,7 @@ h3 {
     color: rgb(0, 146, 70);
     font-size: 70px;
     font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 800pxpx;
+    font-weight: 800px;
     font-style: normal;
     margin-top: 0px;
     margin-bottom: -15px;
@@ -163,7 +154,7 @@ h4 {
 
 .quienessomos {
     width: 80%;
-    height: 200px;
+    gap: 5px;
     display: flex;
     margin: auto;
     padding: 50px;
@@ -179,20 +170,20 @@ h4 {
 
 .quienes2 {
     width: 60%;
+    padding: 5px;
 }
 
 .donde1 {
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    margin-top: -30px;
+    padding: 0;
 }
 
 .donde2 {
     width: 60%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,10 +192,10 @@ h4 {
 
 .dondeestamos {
     width: 80%;
-    height: 200px;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    gap: 5px;
     padding: 50px;
     background-color: rgba(255, 217, 0, 0.226);
     flex-direction: row-reverse;
@@ -245,10 +236,15 @@ aside>div {
     border-radius: 10px;
 }
 
+aside:hover{
+    display: none;
+}
+
 /* tarjetas de especialidades */
 #espetitle {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .especialidades {
@@ -258,13 +254,15 @@ aside>div {
     margin: 5px;
     margin: auto;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
 .card-container {
     perspective: 1000px;
-    width: 300px;
-    height: 400px;
+    width: 280px;
+    height: 360px;
 }
 
 .card {
@@ -323,22 +321,71 @@ footer {
     justify-content: space-evenly;
     color: beige;
     font-size: 24px;
+    flex-wrap: wrap;
 }
 
-.footercontent{
+.footercontent {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
 }
 
-.footercontent>a{
+.footercontent>a {
     text-decoration: none;
     color: beige;
     margin-top: 15px;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
-#instagram{
+#instagram {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+
+
+@media screen and (width<1450px) {
+    .fotoheader {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    h4 {
+        display: none;
+    }
+    .footercontent>a {
+    font-size: large;
+}
+
+}
+
+
+
+.textoregreso {
+    position: fixed;
+    top: 15%;
+    left: 15px;
+    border-radius: 50%;
+    background: #082359;
+    background: radial-gradient(circle, rgba(8, 35, 89, 1) 22%, rgba(148, 187, 233, 1) 80%);
+    display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border: 2px solid rgb(187, 187, 209);
+    .volver{text-indent: 0;
+    font-size: medium;
+color: white;}
+}
+
+.textoregreso:hover{
+    scale: 120%;
+    transition: 1s;
 }
